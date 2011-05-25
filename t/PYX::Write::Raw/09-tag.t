@@ -13,12 +13,15 @@ my $data_dir = File::Object->new->up->dir('data');
 # Include helpers.
 do File::Object->new->up->file('get_stdout.inc')->s;
 
+# Test.
 my $obj = PYX::Write::Raw->new;
 my $ret = get_stdout($obj, $data_dir->file('tag1.pyx')->s);
 is($ret, '<tag></tag>');
 
+# Test.
 $ret = get_stdout($obj, $data_dir->file('tag2.pyx')->s);
 is($ret, '<tag par="val"></tag>');
 
+# Test.
 $ret = get_stdout($obj, $data_dir->file('tag3.pyx')->s);
 is($ret, '<tag par="val\nval"></tag>');
