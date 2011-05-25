@@ -4,15 +4,15 @@ use PYX::Write::Raw;
 use Test::More 'tests' => 2;
 
 # Directories.
-my $data_dir = File::Object->new->up->dir('data')->serialize;
+my $data_dir = File::Object->new->up->dir('data');
 
 # Include helpers.
-do File::Object->new->up->file('get_stdout.inc')->serialize;
+do File::Object->new->up->file('get_stdout.inc')->s;
 
 print "Testing: Comment writing.\n";
 my $obj = PYX::Write::Raw->new;
-my $ret = get_stdout($obj, $data_dir.'/comment1.pyx');
+my $ret = get_stdout($obj, $data_dir->file('comment1.pyx')->s);
 is($ret, '<!--comment-->');
 
-$ret = get_stdout($obj, $data_dir.'/comment2.pyx');
+$ret = get_stdout($obj, $data_dir->file('comment2.pyx')->s);
 is($ret, "<!--comment\ncomment-->");

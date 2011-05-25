@@ -4,18 +4,18 @@ use PYX::Write::Raw;
 use Test::More 'tests' => 3;
 
 # Directories.
-my $data_dir = File::Object->new->up->dir('data')->serialize;
+my $data_dir = File::Object->new->up->dir('data');
 
 # Include helpers.
-do File::Object->new->up->file('get_stdout.inc')->serialize;
+do File::Object->new->up->file('get_stdout.inc')->s;
 
 print "Testing: Tag writing.\n";
 my $obj = PYX::Write::Raw->new;
-my $ret = get_stdout($obj, $data_dir.'/tag1.pyx');
+my $ret = get_stdout($obj, $data_dir->file('tag1.pyx')->s);
 is($ret, '<tag></tag>');
 
-$ret = get_stdout($obj, $data_dir.'/tag2.pyx');
+$ret = get_stdout($obj, $data_dir->file('tag2.pyx')->s);
 is($ret, '<tag par="val"></tag>');
 
-$ret = get_stdout($obj, $data_dir.'/tag3.pyx');
+$ret = get_stdout($obj, $data_dir->file('tag3.pyx')->s);
 is($ret, '<tag par="val\nval"></tag>');
