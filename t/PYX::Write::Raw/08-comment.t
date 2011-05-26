@@ -6,18 +6,26 @@ use warnings;
 use File::Object;
 use PYX::Write::Raw;
 use Test::More 'tests' => 2;
+use Test::Output;
 
 # Directories.
 my $data_dir = File::Object->new->up->dir('data');
 
-# Include helpers.
-do File::Object->new->up->file('get_stdout.inc')->s;
-
 # Test.
 my $obj = PYX::Write::Raw->new;
-my $ret = get_stdout($obj, $data_dir->file('comment1.pyx')->s);
-is($ret, '<!--comment-->');
+stdout_is(
+	sub {
+		$obj->parse_file($data_dir->file('comment1.pyx')->s);
+		return;
+	},
+	'<!--comment-->',
+);
 
 # Test.
-$ret = get_stdout($obj, $data_dir->file('comment2.pyx')->s);
-is($ret, "<!--comment\ncomment-->");
+stdout_is(
+	sub {
+		$obj->parse_file($data_dir->file('comment2.pyx')->s);
+		return;
+	},
+	"<!--comment\ncomment-->"
+);
