@@ -22,6 +22,7 @@ WriteMakefile(
 	'EXE_FILES' => [
 		'bin/pyx2xml_raw',
 	],
+	'LICENSE' => 'bsd',
 	'NAME' => 'PYX::Write::Raw',
 	'PREREQ_PM' => {
 		'Class::Utils' => 0.01,
