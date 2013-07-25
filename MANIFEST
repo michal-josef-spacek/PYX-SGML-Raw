@@ -1,6 +1,6 @@
 bin/pyx2xml_raw
-CHANGES
-Makefile.PL
+Changes
+makefile.PL
 MANIFEST			This list of files
 Raw.pm
 t/data/char1.pyx
