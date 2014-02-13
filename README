@@ -1,0 +1,55 @@
+NAME
+    PYX::Write::Raw - TODO
+
+SYNOPSIS
+    TODO
+
+SUBROUTINES
+    "new()"
+             Constructor.
+
+            *       "output_handler"
+
+                     TODO
+
+    "parse()"
+             TODO
+
+    "parse_file()"
+             TODO
+
+    "parse_handler()"
+             TODO
+
+ERRORS
+     Mine:
+       TODO
+
+     From Class::Utils::set_params():
+       Unknown parameter '%s'.
+
+EXAMPLE
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use PYX::Write::Raw;
+
+     TODO
+
+DEPENDENCIES
+    Class::Utils, Error::Pure, PYX::Parser, PYX::Utils.
+
+SEE ALSO
+    TODO
+
+AUTHOR
+    Michal Špaček skim@cpan.org.
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+
