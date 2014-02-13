@@ -5,7 +5,8 @@ use warnings;
 # Modules.
 use File::Object;
 use PYX::Write::Raw;
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
+use Test::NoWarnings;
 use Test::Output;
 
 # Directories.

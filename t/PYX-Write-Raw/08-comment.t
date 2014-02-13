@@ -5,7 +5,8 @@ use warnings;
 # Modules.
 use File::Object;
 use PYX::Write::Raw;
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 3;
+use Test::NoWarnings;
 use Test::Output;
 
 # Directories.
@@ -15,17 +16,17 @@ my $data_dir = File::Object->new->up->dir('data');
 my $obj = PYX::Write::Raw->new;
 stdout_is(
 	sub {
-		$obj->parse_file($data_dir->file('instruction1.pyx')->s);
+		$obj->parse_file($data_dir->file('comment1.pyx')->s);
 		return;
 	},
-	'<?target code?>',
+	'<!--comment-->',
 );
 
 # Test.
 stdout_is(
 	sub {
-		$obj->parse_file($data_dir->file('instruction2.pyx')->s);
+		$obj->parse_file($data_dir->file('comment2.pyx')->s);
 		return;
 	},
-	"<?target data\ndata?>",
+	"<!--comment\ncomment-->"
 );
