@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'TODO';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'PYX-Write-Raw';
 readme_from 'Raw.pm';
