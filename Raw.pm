@@ -9,9 +9,6 @@ use Class::Utils qw(set_params);
 use PYX::Parser;
 use PYX::Utils qw(encode entity_encode);
 
-# Global variables.
-use vars qw(@tag $tag_open);
-
 # Version.
 our $VERSION = 0.01;
 
@@ -28,21 +25,19 @@ sub new {
 
 	# PYX::Parser object.
 	$self->{'pyx_parser'} = PYX::Parser->new(
+		'callbacks' => {
+			'start_element' => \&_start_tag,
+			'end_element' => \&_end_element,
+			'data' => \&_data,
+			'instruction' => \&_instruction,
+			'attribute' => \&_attribute,
+			'comment' => \&_comment,
+		},
+		'non_parser_options' => {
+			'tag_open' => 0,
+		},
 		'output_handler' => $self->{'output_handler'},
-		'start_tag' => \&_start_tag,
-		'end_tag' => \&_end_tag,
-		'data' => \&_data,
-		'instruction' => \&_instruction,
-		'attribute' => \&_attribute,
-		'comment' => \&_comment,
 	);
-
-	# Open tag.
-	$self->{'tag_open'} = 0;
-	$tag_open = \$self->{'tag_open'};
-
-	# Tag values.
-	@tag = ();
 
 	# Object.
 	return $self;
@@ -69,22 +64,22 @@ sub parse_handler {
 	return;
 }
 
-# Process start of tag.
-sub _start_tag {
-	my ($pyx_parser_obj, $tag) = @_;
+# Process start of element.
+sub _start_element {
+	my ($pyx_parser_obj, $elem) = @_;
 	my $out = $pyx_parser_obj->{'output_handler'};
 	_end_of_start_tag($pyx_parser_obj);
-	print {$out} "<$tag";
-	${$tag_open} = 1;
+	print {$out} "<$elem";
+	$pyx_parser_obj->{'non_parser_options'}->{'tag_open'} = 1;
 	return;
 }
 
-# Process end of tag.
-sub _end_tag {
-	my ($pyx_parser_obj, $tag) = @_;
+# Process end of element.
+sub _end_element {
+	my ($pyx_parser_obj, $elem) = @_;
 	my $out = $pyx_parser_obj->{'output_handler'};
 	_end_of_start_tag($pyx_parser_obj);
-	print {$out} "</$tag>";
+	print {$out} "</$elem>";
 	return;
 }
 
@@ -119,9 +114,9 @@ sub _instruction {
 sub _end_of_start_tag {
 	my $pyx_parser_obj = shift;
 	my $out = $pyx_parser_obj->{'output_handler'};
-	if (${$tag_open}) {
+	if ($pyx_parser_obj->{'non_parser_options'}->{'tag_open'}) {
 		print {$out} '>';
-		${$tag_open} = 0;
+		$pyx_parser_obj->{'non_parser_options'}->{'tag_open'} = 0;
 	}
 	return;
 }
