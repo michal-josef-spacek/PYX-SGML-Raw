@@ -39,7 +39,7 @@ EXAMPLE
      TODO
 
 DEPENDENCIES
-    Class::Utils, Error::Pure, PYX::Parser, PYX::Utils.
+    Class::Utils, PYX::Parser, PYX::Utils.
 
 SEE ALSO
     TODO
