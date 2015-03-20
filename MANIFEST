@@ -10,7 +10,6 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 LICENSE
 Makefile.PL
-makefile.PL
 MANIFEST			This list of files
 META.yml
 Raw.pm
@@ -29,7 +28,6 @@ t/data/tag1.pyx
 t/data/tag2.pyx
 t/data/tag3.pyx
 t/data/tag4.pyx
-t/get_stdout.inc
 t/PYX-Write-Raw/00-use.t
 t/PYX-Write-Raw/01-version.t
 t/PYX-Write-Raw/02-pod_coverage.t
