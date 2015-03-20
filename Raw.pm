@@ -182,11 +182,9 @@ TODO
 
 =head1 ERRORS
 
- Mine:
-   TODO
-
- From Class::Utils::set_params():
-   Unknown parameter '%s'.
+ new():
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
 
 =head1 EXAMPLE
 
