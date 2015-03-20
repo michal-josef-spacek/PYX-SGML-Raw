@@ -8,7 +8,6 @@ use inc::Module::Install;
 # Definition.
 abstract 'TODO';
 author 'Michal Špaček <skim@cpan.org>';
-install_script 'bin/pyx2xml_raw';
 license 'bsd';
 name 'PYX-Write-Raw';
 readme_from 'Raw.pm';
