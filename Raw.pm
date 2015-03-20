@@ -26,7 +26,7 @@ sub new {
 	# PYX::Parser object.
 	$self->{'pyx_parser'} = PYX::Parser->new(
 		'callbacks' => {
-			'start_element' => \&_start_tag,
+			'start_element' => \&_start_element,
 			'end_element' => \&_end_element,
 			'data' => \&_data,
 			'instruction' => \&_instruction,
