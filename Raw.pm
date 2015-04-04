@@ -10,7 +10,7 @@ use PYX::Parser;
 use PYX::Utils qw(encode entity_encode);
 
 # Version.
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Constructor.
 sub new {
@@ -242,6 +242,6 @@ Michal Špaček L<skim@cpan.org>.
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
