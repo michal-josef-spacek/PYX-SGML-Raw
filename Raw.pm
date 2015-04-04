@@ -139,7 +139,7 @@ __END__
 
 =head1 NAME
 
-PYX::Write::Raw - TODO
+PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 
 =head1 SYNOPSIS
 
