@@ -4,7 +4,7 @@ use warnings;
 
 # Modules.
 use File::Object;
-use PYX::Write::Raw;
+use PYX::SGML::Raw;
 use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Test::Output;
@@ -13,7 +13,7 @@ use Test::Output;
 my $data_dir = File::Object->new->up->dir('data');
 
 # Test.
-my $obj = PYX::Write::Raw->new;
+my $obj = PYX::SGML::Raw->new;
 stdout_is(
 	sub {
 		$obj->parse_file($data_dir->file('tag1.pyx')->s);

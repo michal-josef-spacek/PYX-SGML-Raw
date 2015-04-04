@@ -7,4 +7,4 @@ use Test::NoWarnings;
 use Test::Pod::Coverage 'tests' => 2;
 
 # Test.
-pod_coverage_ok('PYX::Write::Raw', 'PYX::Write::Raw is covered.');
+pod_coverage_ok('PYX::SGML::Raw', 'PYX::SGML::Raw is covered.');

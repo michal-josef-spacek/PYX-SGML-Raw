@@ -1,4 +1,4 @@
-package PYX::Write::Raw;
+package PYX::SGML::Raw;
 
 # Pragmas.
 use strict;

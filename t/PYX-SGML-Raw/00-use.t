@@ -9,8 +9,8 @@ use Test::NoWarnings;
 BEGIN {
 
 	# Test.
-	use_ok('PYX::Write::Raw');
+	use_ok('PYX::SGML::Raw');
 }
 
 # Test.
-require_ok('PYX::Write::Raw');
+require_ok('PYX::SGML::Raw');
