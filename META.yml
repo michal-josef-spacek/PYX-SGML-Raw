@@ -23,6 +23,7 @@ meta-spec:
 name: PYX-SGML-Raw
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:
