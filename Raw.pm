@@ -143,7 +143,11 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 
 =head1 SYNOPSIS
 
-TODO
+ use PYX::SGML::Raw;
+ my $obj = PYX::SGML::Raw->new(%parameters);
+ $obj->parse($pyx, $out);
+ $obj->parse_file($input_file, $out);
+ $obj->parse_handle($input_file_handler, $out);
 
 =head1 SUBROUTINES
 
@@ -157,21 +161,31 @@ TODO
 
 =item * C<output_handler>
 
- TODO
+ Output handler.
+ Default value is \*STDOUT.
 
 =back
 
-=item C<parse()>
+=item C<parse($pyx[, $out])>
 
- TODO
+ Parse PYX text or array of PYX text.
+ Output is serialization to SGML.
+ If $out not present, use 'output_handler'.
+ Returns undef.
 
-=item C<parse_file()>
+=item C<parse_file($input_file[, $out])>
 
- TODO
+ Parse file with PYX data.
+ Output is serialization to SGML.
+ If $out not present, use 'output_handler'.
+ Returns undef.
 
-=item C<parse_handler()>
+=item C<parse_handler($input_file_handler[, $out])>
 
- TODO
+ Parse PYX handler.
+ Output is serialization to SGML.
+ If $out not present, use 'output_handler'.
+ Returns undef.
 
 =back
 
@@ -188,9 +202,24 @@ TODO
  use warnings;
 
  # Modules.
- use PYX::Write::Raw;
+ use PYX::SGML::Raw;
 
- TODO
+ # Input.
+ my $pyx = <<'END';
+ (element
+ -data
+ )element
+ END
+
+ # Object.
+ my $obj = PYX::SGML::Raw->new;
+
+ # Process.
+ $obj->parse($pyx);
+ print "\n";
+
+ # Output:
+ # <element>data</element>
 
 =head1 DEPENDENCIES
 
@@ -200,7 +229,7 @@ L<PYX::Utils>.
 
 =head1 SEE ALSO
 
-TODO
+L<Task::PYX>.
 
 =head1 AUTHOR
 
