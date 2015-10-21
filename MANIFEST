@@ -34,11 +34,11 @@ t/data/tag3.pyx
 t/data/tag4.pyx
 t/PYX-SGML-Raw/01-use.t
 t/PYX-SGML-Raw/02-version.t
-t/PYX-SGML-Raw/03-char.t
-t/PYX-SGML-Raw/04-start_tag.t
-t/PYX-SGML-Raw/05-end_tag.t
-t/PYX-SGML-Raw/06-instruction.t
-t/PYX-SGML-Raw/07-comment.t
-t/PYX-SGML-Raw/08-tag.t
+t/PYX-SGML-Raw/03-parse_file-char.t
+t/PYX-SGML-Raw/04-parse_file-start_tag.t
+t/PYX-SGML-Raw/05-parse_file-end_tag.t
+t/PYX-SGML-Raw/06-parse_file-instruction.t
+t/PYX-SGML-Raw/07-parse_file-comment.t
+t/PYX-SGML-Raw/08-parse_file-tag.t
 xt/PYX-SGML-Raw/01-pod_coverage.t
 xt/PYX-SGML-Raw/02-pod.t
