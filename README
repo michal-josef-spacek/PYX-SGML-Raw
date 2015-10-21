@@ -69,7 +69,8 @@ DEPENDENCIES
     Class::Utils, PYX::Parser, PYX::Utils.
 
 SEE ALSO
-    Task::PYX.
+    Task::PYX
+        Install the PYX modules.
 
 AUTHOR
     Michal Špaček skim@cpan.org.
