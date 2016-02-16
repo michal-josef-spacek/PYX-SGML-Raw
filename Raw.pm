@@ -64,6 +64,12 @@ sub parse_handler {
 	return;
 }
 
+sub finalize {
+	my $self = shift;
+	_end_of_start_tag($self->{'pyx_parser'});
+	return;
+}
+
 # Process start of element.
 sub _start_element {
 	my ($pyx_parser_obj, $elem) = @_;
@@ -148,6 +154,7 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
  $obj->parse($pyx, $out);
  $obj->parse_file($input_file, $out);
  $obj->parse_handle($input_file_handler, $out);
+ $obj->finalize;
 
 =head1 SUBROUTINES
 
@@ -185,6 +192,11 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
  Parse PYX handler.
  Output is serialization to SGML.
  If $out not present, use 'output_handler'.
+ Returns undef.
+
+=item C<finalize()>
+
+ Finalize opened tags, if exists.
  Returns undef.
 
 =back
