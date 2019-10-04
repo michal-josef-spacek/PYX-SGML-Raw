@@ -1,15 +1,12 @@
 package PYX::SGML::Raw;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use PYX::Parser;
 use PYX::Utils qw(encode entity_encode);
 
-# Version.
 our $VERSION = 0.03;
 
 # Constructor.
@@ -209,11 +206,9 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 
 =head1 EXAMPLE
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use PYX::SGML::Raw;
 
  # Input.
