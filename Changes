@@ -1,5 +1,6 @@
 0.03
  - Add finalize() method.
+ - Update Module::Install to 1.19 version.
  - Update copyright years.
 
 0.02 2015-10-21T17:00:08+02:00
