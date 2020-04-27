@@ -244,6 +244,10 @@ Install the PYX modules.
 
 =back
 
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/PYX-SGML-Raw>
+
 =head1 AUTHOR
 
 Michal Josef Špaček L<skim@cpan.org>.
