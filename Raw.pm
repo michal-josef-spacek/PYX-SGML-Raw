@@ -147,6 +147,7 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 =head1 SYNOPSIS
 
  use PYX::SGML::Raw;
+
  my $obj = PYX::SGML::Raw->new(%parameters);
  $obj->parse($pyx, $out);
  $obj->parse_file($input_file, $out);
