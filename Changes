@@ -2,6 +2,7 @@
  - Add finalize() method.
  - Fix Makefile.PL fails with no '.' in @INC.
  - Update Module::Install to 1.19 version.
+ - Update author github username.
  - Update copyright years.
  - Update my name to reality.
 
