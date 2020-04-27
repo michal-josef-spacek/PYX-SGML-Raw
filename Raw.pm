@@ -252,6 +252,8 @@ L<https://github.com/michal-josef-spacek/PYX-SGML-Raw>
 
 Michal Josef Špaček L<skim@cpan.org>.
 
+L<http://skim.cz>
+
 =head1 LICENSE AND COPYRIGHT
 
 © 2011-2016 Michal Josef Špaček

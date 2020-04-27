@@ -1,5 +1,6 @@
 0.03
  - Add REPOSITORY section to doc.
+ - Add author website to AUTHOR section in doc.
  - Add finalize() method.
  - Fix Makefile.PL fails with no '.' in @INC.
  - Improve LICENSE AND COPYRIGHT section in doc.
