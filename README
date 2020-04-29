@@ -10,7 +10,7 @@ SYNOPSIS
      $obj->parse_handle($input_file_handler, $out);
      $obj->finalize;
 
-SUBROUTINES
+METHODS
   "new"
      my $obj = PYX::SGML::Raw->new(%parameters);
 

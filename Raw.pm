@@ -154,7 +154,7 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
  $obj->parse_handle($input_file_handler, $out);
  $obj->finalize;
 
-=head1 SUBROUTINES
+=head1 METHODS
 
 =head2 C<new>
 

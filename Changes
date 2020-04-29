@@ -1,4 +1,5 @@
 0.04
+ - Fix METHODS section in doc.
  - Rewrite METHODS to =head2 in doc.
  - Update copyright years.
 
