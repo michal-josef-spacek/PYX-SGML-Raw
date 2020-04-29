@@ -156,11 +156,13 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<new>
 
-=item C<new()>
+ my $obj = PYX::SGML::Raw->new(%parameters);
 
- Constructor.
+Constructor.
+
+Returns instance of object.
 
 =over 8
 
@@ -171,33 +173,43 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 
 =back
 
-=item C<parse($pyx[, $out])>
+=head2 C<parse>
 
- Parse PYX text or array of PYX text.
- Output is serialization to SGML.
- If $out not present, use 'output_handler'.
- Returns undef.
+ $obj->parse($pyx, $out);
 
-=item C<parse_file($input_file[, $out])>
+Parse PYX text or array of PYX text.
+Output is serialization to SGML.
+If $out not present, use 'output_handler'.
 
- Parse file with PYX data.
- Output is serialization to SGML.
- If $out not present, use 'output_handler'.
- Returns undef.
+Returns undef.
 
-=item C<parse_handler($input_file_handler[, $out])>
+=head2 C<parse_file>
 
- Parse PYX handler.
- Output is serialization to SGML.
- If $out not present, use 'output_handler'.
- Returns undef.
+ $obj->parse_file($input_file, $out);
 
-=item C<finalize()>
+Parse file with PYX data.
+Output is serialization to SGML.
+If $out not present, use 'output_handler'.
 
- Finalize opened tags, if exists.
- Returns undef.
+Returns undef.
 
-=back
+=head2 C<parse_handler>
+
+ $obj->parse_handle($input_file_handler, $out);
+
+Parse PYX handler.
+Output is serialization to SGML.
+If $out not present, use 'output_handler'.
+
+Returns undef.
+
+=head2 C<finalize>
+
+ $obj->finalize;
+
+Finalize opened tags, if exists.
+
+Returns undef.
 
 =head1 ERRORS
 
