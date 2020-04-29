@@ -1,5 +1,6 @@
 0.04
  - Fix METHODS section in doc.
+ - Rename all files, which has name 'tag' in name to use of 'element'.
  - Rewrite METHODS to =head2 in doc.
  - Update copyright years.
 

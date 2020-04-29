@@ -1,10 +1,12 @@
 TODO
 ====
 2. Testy pro parse() a parse_handler() metody.
-3. Prejmenovat datove soubory na element (misto tags)
 4.
 
 Applied
 =======
 1. Bylo by dobre prejmenovat na neco jako PYX2SGML.
 OK [20150305] skim
+
+3. Prejmenovat datove soubory na element (misto tags)
+OK [20200429] skim

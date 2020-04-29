@@ -14,26 +14,26 @@ my $data_dir = File::Object->new->up->dir('data');
 my $obj = PYX::SGML::Raw->new;
 stdout_is(
 	sub {
-		$obj->parse_file($data_dir->file('tag1.pyx')->s);
+		$obj->parse_file($data_dir->file('element1.pyx')->s);
 		return;
 	},
-	'<tag></tag>',
+	'<element></element>',
 );
 
 # Test.
 stdout_is(
 	sub {
-		$obj->parse_file($data_dir->file('tag2.pyx')->s);
+		$obj->parse_file($data_dir->file('element2.pyx')->s);
 		return;
 	},
-	'<tag par="val"></tag>',
+	'<element par="val"></element>',
 );
 
 # Test.
 stdout_is(
 	sub {
-		$obj->parse_file($data_dir->file('tag3.pyx')->s);
+		$obj->parse_file($data_dir->file('element3.pyx')->s);
 		return;
 	},
-	'<tag par="val\nval"></tag>',
+	'<element par="val\nval"></element>',
 );

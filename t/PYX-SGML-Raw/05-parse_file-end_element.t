@@ -14,8 +14,8 @@ my $data_dir = File::Object->new->up->dir('data');
 my $obj = PYX::SGML::Raw->new;
 stdout_is(
 	sub {
-		$obj->parse_file($data_dir->file('end_tag1.pyx')->s);
+		$obj->parse_file($data_dir->file('end_element1.pyx')->s);
 		return;
 	},
-	'</tag>',
+	'</element>',
 );
