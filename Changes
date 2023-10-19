@@ -1,5 +1,6 @@
 0.05
  - Fix typo in doc.
+ - Update Module::Install to 1.21 version.
 
 0.04 2020-04-29T16:09:46+02:00
  - Fix METHODS section in doc.
