@@ -151,7 +151,7 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
  my $obj = PYX::SGML::Raw->new(%parameters);
  $obj->parse($pyx, $out);
  $obj->parse_file($input_file, $out);
- $obj->parse_handle($input_file_handler, $out);
+ $obj->parse_handler($input_file_handler, $out);
  $obj->finalize;
 
 =head1 METHODS
@@ -195,7 +195,7 @@ Returns undef.
 
 =head2 C<parse_handler>
 
- $obj->parse_handle($input_file_handler, $out);
+ $obj->parse_handler($input_file_handler, $out);
 
 Parse PYX handler.
 Output is serialization to SGML.
