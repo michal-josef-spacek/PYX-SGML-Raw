@@ -1,5 +1,6 @@
 0.05
  - Fix typo in doc.
+ - Improve doc in constructor.
  - Move bugtracker to github.
  - Update Module::Install to 1.21 version.
  - Update copyright years.

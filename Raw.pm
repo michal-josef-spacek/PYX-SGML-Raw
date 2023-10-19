@@ -162,8 +162,6 @@ PYX::SGML::Raw - Processing PYX data or file and write as SGML.
 
 Constructor.
 
-Returns instance of object.
-
 =over 8
 
 =item * C<output_handler>
@@ -172,6 +170,8 @@ Returns instance of object.
  Default value is \*STDOUT.
 
 =back
+
+Returns instance of object.
 
 =head2 C<parse>
 

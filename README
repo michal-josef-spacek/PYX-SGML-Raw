@@ -16,12 +16,12 @@ METHODS
 
     Constructor.
 
-    Returns instance of object.
-
     *       "output_handler"
 
              Output handler.
              Default value is \*STDOUT.
+
+    Returns instance of object.
 
   "parse"
      $obj->parse($pyx, $out);
