@@ -200,7 +200,7 @@ Returns instance of object.
 
 Parse PYX text or array of PYX text.
 Output is serialization to SGML.
-If $out not present, use 'output_handler'.
+If C<$out> not present, use 'output_handler'.
 
 Returns undef.
 
@@ -210,7 +210,7 @@ Returns undef.
 
 Parse file with PYX data.
 Output is serialization to SGML.
-If $out not present, use 'output_handler'.
+If C<$out> not present, use 'output_handler'.
 
 Returns undef.
 
@@ -218,9 +218,9 @@ Returns undef.
 
  $obj->parse_handler($input_file_handler, $out);
 
-Parse PYX handler.
+Parse PYX defined by handler.
 Output is serialization to SGML.
-If $out not present, use 'output_handler'.
+If C<$out> not present, use 'output_handler'.
 
 Returns undef.
 
