@@ -219,6 +219,8 @@ Returns undef.
 
 =head1 EXAMPLE
 
+=for comment filename=pyx_as_sgml.pl
+
  use strict;
  use warnings;
 

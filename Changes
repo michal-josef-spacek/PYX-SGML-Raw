@@ -2,6 +2,7 @@
  - Fix typo in doc.
  - Improve doc in constructor.
  - Move bugtracker to github.
+ - Rename example file to better name.
  - Update Module::Install to 1.21 version.
  - Update copyright years.
 
